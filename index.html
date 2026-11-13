@@ -3,65 +3,191 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>echolessdev</title>
-<meta name="description" content="Android apps and games by echolessdev, with their privacy policies.">
+<title>Privacy Policy — Paint Pour</title>
+<meta name="description" content="What Paint Pour keeps on your phone, what its ads and purchases send, and how to limit it.">
 <style>
-  /* Plain on purpose: no webfont, no images, nothing fetched from anyone else. */
+  /* No webfont and no images: a page about what leaves your device should not
+     fetch anything from a third party to render itself. Colours are the game's
+     Night glow palette. */
   :root {
-    --bg: #0d1018;
-    --panel: #161b26;
-    --edge: rgba(200, 215, 235, 0.12);
-    --ink: #e6edf5;
-    --ink-soft: #9aa8b8;
-    --ink-dim: #6f7d8e;
-    --link: #6fd3c6;
+    --night: #0d0e1c;
+    --night-mid: #15172e;
+    --night-top: #2b2f5a;
+    --card: #191c38;
+    --edge: rgba(190, 200, 255, 0.14);
+    --ink: #f2f0ff;
+    --ink-soft: #a7a6c9;
+    --ink-dim: #7a7aa0;
+    --accent: #7cf0d2;
+    --glow: #ffd84a;
   }
   * { box-sizing: border-box; }
+  html { background: var(--night); }
   body {
     margin: 0;
     padding: 0 20px 80px;
-    background: var(--bg);
+    background: linear-gradient(var(--night-top), var(--night-mid) 360px, var(--night) 900px) no-repeat;
+    background-color: var(--night);
     color: var(--ink);
-    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     -webkit-text-size-adjust: 100%;
   }
-  main { max-width: 640px; margin: 0 auto; }
-  header { padding: 64px 0 28px; }
-  h1 { font-size: 30px; margin: 0 0 6px; letter-spacing: -0.01em; }
-  .sub { color: var(--ink-soft); margin: 0; }
-  ul { list-style: none; margin: 0; padding: 0; }
-  li {
-    background: var(--panel); border: 1px solid var(--edge); border-radius: 14px;
-    padding: 18px 20px; margin-bottom: 12px;
+  main { max-width: 680px; margin: 0 auto; }
+  header { padding: 56px 0 8px; border-bottom: 1px solid var(--edge); margin-bottom: 34px; }
+  .drops { display: flex; gap: 8px; margin-bottom: 18px; }
+  .drops span { width: 14px; height: 14px; border-radius: 50%; box-shadow: 0 0 12px currentColor; background: currentColor; }
+  h1 { font-size: 30px; line-height: 1.2; margin: 0 0 6px; letter-spacing: -0.01em; }
+  .updated { color: var(--ink-dim); font-size: 14px; margin: 0 0 26px; }
+  h2 {
+    font-size: 13px; text-transform: uppercase; letter-spacing: 0.09em;
+    color: var(--accent); margin: 44px 0 12px; font-weight: 600;
   }
-  h2 { font-size: 19px; margin: 0 0 4px; }
-  li p { margin: 0 0 8px; color: var(--ink-soft); }
-  a { color: var(--link); }
-  footer { margin-top: 40px; color: var(--ink-dim); font-size: 14px; }
+  p { margin: 0 0 15px; }
+  ul { margin: 0 0 15px; padding-left: 22px; }
+  li { margin-bottom: 7px; }
+  a { color: var(--accent); }
+  strong { color: #fff; }
+  .lede {
+    background: var(--card); border: 1px solid var(--edge); border-radius: 14px;
+    padding: 20px 22px; margin: 0 0 8px;
+  }
+  .lede p:last-child { margin-bottom: 0; }
+  table { border-collapse: collapse; width: 100%; margin: 0 0 15px; font-size: 15px; }
+  th, td { text-align: left; padding: 11px 12px; border-bottom: 1px solid var(--edge); vertical-align: top; }
+  th { color: var(--ink-soft); font-weight: 600; width: 34%; }
+  footer { margin-top: 54px; padding-top: 20px; border-top: 1px solid var(--edge); color: var(--ink-dim); font-size: 14px; }
+  @media (max-width: 520px) {
+    h1 { font-size: 25px; }
+    th, td { display: block; width: auto; border-bottom: none; padding: 3px 0; }
+    td { padding-bottom: 14px; border-bottom: 1px solid var(--edge); }
+  }
 </style>
 </head>
 <body>
 <main>
 
 <header>
-  <h1>echolessdev</h1>
-  <p class="sub">Apps and games for Android.</p>
+  <div class="drops" aria-hidden="true">
+    <span style="color:#e8424f"></span><span style="color:#ffd84a"></span><span style="color:#3d7bff"></span>
+  </div>
+  <h1>Privacy Policy</h1>
+  <p class="updated">Paint Pour · Last updated 13 November 2026</p>
 </header>
 
-<ul>
-  <li>
-    <h2>OffMyMind</h2>
-    <p>Tracks what expires, like licences, insurance and passports, and reminds you before it lapses.</p>
-    <a href="https://yairo87.github.io/offmymind-privacy/">Privacy policy</a>
-  </li>
-  <li>
-    <h2>Paint Pour</h2>
-    <p>A puzzle about pouring layered paint between glass vials to mix exact colours.</p>
-    <a href="paintpour/privacy/">Privacy policy</a>
-  </li>
-</ul>
+<div class="lede">
+  <p>Paint Pour has no account and no sign-in, and your progress stays on your
+  phone. The game is free and paid for by ads. The ad service it uses,
+  AppLovin, collects some information from your phone to show them. This page
+  says what, and how to limit it.</p>
+</div>
 
-<footer>Contact: <a href="mailto:echolessdev@gmail.com">echolessdev@gmail.com</a></footer>
+<h2>What the game stores, and where</h2>
+<p>The game keeps one file in its own folder on your phone, holding:</p>
+<ul>
+  <li>your progress: the furthest level open and your best stars on each level</li>
+  <li>your coins, your lives and when the next one comes back, and the hints,
+  extra vials and drains you own</li>
+  <li>a log of your last 500 attempts: the level, how it ended, and how many
+  pours, undos, stars and seconds it took. It helps us tune how hard the levels
+  are while the game is being tested. Nothing sends it anywhere.</li>
+  <li>whether you bought Remove ads or the Starter pack, and when you last bought
+  something, since ads between levels pause for a day after a purchase</li>
+  <li>counters that space out the ads: when the last one between levels played,
+  how many levels you have finished since, how many played today, and when you
+  last watched one for a free hint</li>
+  <li>your settings: sound and vibration</li>
+  <li>whether you have seen the one-time lesson on draining a vial</li>
+</ul>
+<p>The file is removed when you delete the game. If your phone backs up apps to
+your Google account, Android may include it in that backup, which Google keeps
+under the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+
+<h2>What leaves your phone</h2>
+<p>What is described here, and nothing else. The game contains no analytics or
+crash reporting of our own, and we run no server that receives anything from
+it.</p>
+
+<p><strong>Ads.</strong> Now and then an ad plays when you go on to the next
+level, and you can choose to watch an ad for a reward, such as a free hint or
+more pours. Remove ads stops the ones between levels. The ads are served by
+AppLovin MAX, from AppLovin Corp. To pick an ad, show it, count it and guard
+against fraud, the AppLovin library inside the game sends AppLovin:</p>
+<ul>
+  <li>your phone's advertising ID, and device details such as its model,
+  Android version, language and time zone</li>
+  <li>your IP address, from which a rough location, such as your country or
+  city, can be worked out</li>
+  <li>which ads were shown and what you did with them: whether you tapped one,
+  and whether you watched a rewarded ad to the end</li>
+  <li>technical logs from the ad library, such as errors and load times</li>
+</ul>
+<p>The game gives AppLovin nothing else: not your progress, coins or purchases.
+AppLovin handles what it collects under its own
+<a href="https://legal.applovin.com/privacy/">privacy policy</a>.
+AppLovin MAX can also ask other ad networks for an ad. When we add one, it is
+named here with a link to its own policy.</p>
+
+<p><strong>Purchases.</strong> Coins, helpers, the Starter pack and Remove ads
+are bought through Google Play, which handles the payment entirely: the game
+never sees your card or payment details. To know what is already yours, the
+game asks Google Play which one-time purchases the Google account on this phone
+owns, when it starts and when you tap Restore purchases. After a purchase it
+confirms it back to Google Play, which Play requires so the purchase is not
+refunded. Google shares with us the order records it provides to every
+developer for payments and refunds. Google describes its own handling of
+purchases in the <a href="https://policies.google.com/privacy">Google Privacy
+Policy</a>.</p>
+
+<h2>Your choices about ads</h2>
+<p><strong>In the European Economic Area, the UK and Switzerland,</strong> the
+game asks before ads can use your data to be personalised, with a consent form
+provided by Google. Google's servers use your IP address to tell whether the
+form applies to you; Google describes this in
+<a href="https://policies.google.com/technologies/partner-sites">how Google
+uses information from apps that use its services</a>. If you say no, ads still
+play but are not personalised; they may still use data to count views, limit
+repeats and catch fraud. You can change your answer at any time from Privacy
+choices in the game's Settings.</p>
+<p><strong>Everywhere,</strong> you can delete or reset your phone's advertising
+ID in Android's settings, on most phones under Settings → Privacy → Ads or
+Settings → Google → Ads. Once it is deleted, ads can no longer be personalised
+from it.</p>
+<p><strong>In US states with privacy laws, such as California,</strong> letting
+an ad network use your advertising ID for personalised ads can count as
+"sharing" or "selling" personal information. Deleting your advertising ID as
+above opts you out. We do not sell anything ourselves, since nothing about you
+reaches us.</p>
+
+<h2>Your data and your rights</h2>
+<p>We keep nothing about you on any server, so there is nothing for us to hand
+over or delete: deleting the game deletes everything it stored. AppLovin's
+<a href="https://legal.applovin.com/privacy/">privacy policy</a> explains how
+to see or delete what it holds. If you cannot get there, write to us and we will
+help you reach AppLovin.</p>
+
+<h2>Permissions the game asks for</h2>
+<table>
+  <tr><th>Internet</th><td>Used to fetch ads and to reach Google Play for purchases, described above.</td></tr>
+  <tr><th>View network connections</th><td>Used by the ad library and Google Play's billing library to tell whether they can be reached before they ask.</td></tr>
+  <tr><th>Advertising ID</th><td>Lets the ad library read the advertising ID described above, unless you have deleted it.</td></tr>
+  <tr><th>Google Play billing</th><td>Lets purchases be made and restored through Google Play.</td></tr>
+  <tr><th>Control vibration</th><td>For a short buzz when you win a level, which you can turn off in Settings.</td></tr>
+</table>
+<p>The game asks for no access to your contacts, location, camera, microphone,
+photos, files or accounts.</p>
+
+<h2>Children</h2>
+<p>Paint Pour is made for adults and is not directed at children. If you
+believe a child is using it, write to us.</p>
+
+<h2>Changes</h2>
+<p>If this policy changes, the date at the top changes with it.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy:
+<a href="mailto:echolessdev@gmail.com">echolessdev@gmail.com</a></p>
+
+<footer>Paint Pour — every drop accounted for.</footer>
 
 </main>
 </body>
